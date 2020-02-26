@@ -1,3 +1,15 @@
-<p>
-  card works!
-</p>
+<!-- <div
+  (click)="onClick()"
+  style="height: 100px;width: 100px;border:1px solid"
+></div> -->
+
+<div class="tp-wrapper" [ngClass]="{ disabledCard: !card.inGame }">
+  <div class="tp-box" (click)="onClick()" [@flipState]="flip">
+    <div class="tp-box__side tp-box__front">Front</div>
+    <div
+      class="tp-box__side tp-box__back"
+      [ngStyle]="{ 'background-image': 'url(' + card.img + ')' }"
+    ></div>
+  </div>
+</div>
+<button (click)="test()">test</button>

@@ -1,3 +1,7 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 :host {
   margin: 10px;
   .tp-wrapper {

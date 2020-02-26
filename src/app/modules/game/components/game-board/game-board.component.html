@@ -1,3 +1,25 @@
-<p>
-  game-board works!
-</p>
+<section class="container">
+  <div class="row">
+    <div class="col-3">Current trys:{{ currentTrys }}</div>
+    <div class="col-3">Best:</div>
+    <div class="col-3">
+      <button (click)="restartGame()" class="btn btn-outline-dark">
+        Restart
+      </button>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="card-container">
+      <div *ngFor="let card of cards; let i = index">
+        <p>
+          {{ card | json }}
+        </p>
+        <app-card
+          [card]="card"
+          [index]="i"
+          (cardClicked)="cardClicked($event)"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+</section>

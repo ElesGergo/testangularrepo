@@ -3,10 +3,10 @@ import { Routes, RouterModule } from "@angular/router";
 import { LandingPageComponent } from "./core/components/landing-page/landing-page.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "v1", pathMatch: "full" },
+  { path: "", redirectTo: "landing-page", pathMatch: "full" },
   { path: "landing-page", component: LandingPageComponent },
   {
-    path: "v1",
+    path: "game",
     loadChildren: () =>
       import("./modules/game/game.module").then(m => m.GameModule)
   }

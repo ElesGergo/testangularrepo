@@ -1,3 +1,9 @@
-<p>
-  start-game works!
-</p>
+<section class="container">
+  <h1>Splendex Memory Game</h1>
+  <form (ngSubmit)="startGame()">
+    <select>
+      <option *ngFor="let number of deckSize" value="number">number</option>
+    </select>
+    <button class="btn-primary">Start New Game</button>
+  </form>
+</section>
